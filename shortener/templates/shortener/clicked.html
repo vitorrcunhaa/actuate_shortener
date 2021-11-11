@@ -1,0 +1,33 @@
+{% extends 'shortener/base.html' %}
+
+{% block body %}
+
+  {% if short_url %}
+
+  <div class="mx-auto text-center mt-5">
+    <h3 class="text-danger">Your shortened Url:</h3>
+		<input class="form-control form-control-sm" type="text" value="{{ short_url }}" id="shortUrl"
+						style="width: 25%; display: inline">
+	  <button class='btn btn-success' onclick="copyShortenedUrl()">Copy</button>
+		<br>
+		<br>
+		<h1>Total of clicks: {{ clicks }}</h1>
+		<br>
+		<br>
+    <p><span class="text-danger">Previous (long) URL:</span> {{ long_url }}</p>
+		<br>
+		<a href="{% url 'home' %}">Create other shortened urls</a>
+  </div>
+  {% endif %}
+<script>
+
+	function copyShortenedUrl() {
+  var copyText = document.getElementById("shortUrl");
+
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+
+  navigator.clipboard.writeText(copyText.value);
+}
+</script>
+{% endblock body %}
