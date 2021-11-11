@@ -30,13 +30,13 @@ have “Clicked on” a shortened URL
 
 ● Run `pip install -r requirements.txt`  
   ( If you don't have pip installed, you can do it here: https://pip.pypa.io/en/stable/installation/ )  
-  
-● Run `python manage.py runserver` or `python3 manage.py runserver`
 
 ● Run `python manage.py migrate` or `python3 manage.py migrate`
 
 ● Run `python manage.py createsuperuser` or `python3 manage.py createsuperuser`
  (remember this user and password, after creating the superuser, you will have access to all database objects probably in http://127.0.0.1:8000/admin/
+
+● Run `python manage.py runserver` or `python3 manage.py runserver`
  
 Have fun 😁
 
